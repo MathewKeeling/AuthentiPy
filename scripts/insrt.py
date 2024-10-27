@@ -1,5 +1,5 @@
 """
-AuthentiPy
+insrt.Py
 2024.10.26
 
 Overview:
@@ -20,7 +20,7 @@ from modules.ServiceManager import ServiceManager
 from modules.Environment import install_dir
 
 # Set up logging
-log_file = f"{install_dir}/resources/logs/authentipy.log"
+log_file = f"{install_dir}/resources/logs/insrt.log"
 os.makedirs(os.path.dirname(log_file), exist_ok=True)
 logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 

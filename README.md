@@ -1,16 +1,18 @@
 ```
-     _         _   _                _   _ ____        
-    / \  _   _| |_| |__   ___ _ __ | |_(_)  _ \ _   _ 
-   / _ \| | | | __| '_ \ / _ \ '_ \| __| | |_) | | | |
-  / ___ \ |_| | |_| | | |  __/ | | | |_| |  __/| |_| |
- /_/   \_\__,_|\__|_| |_|\___|_| |_|\__|_|_|    \__, |
-                                                |___/ 
-                                           v2024.10.26
+-----------------------------------------
+|    _____  _________  ______           |
+|   /  _/ |/ / __/ _ \/_  __/__  __ __  |
+|  _/ //    /\ \/ , _/ / / / _ \/ // /  |
+| /___/_/|_/___/_/|_| /_(_) .__/\_, /   |
+|                        /_/   /___/    |
+|                          v2024.10.26  |
+| "INSRT's Not Simply Remote Transfer"  |
+-----------------------------------------
 ```
 
 ## Overview
 
-**AuthentiPy** is a Python-based application designed to manage certificate deployments efficiently.
+**INSRT.Py** is a Python-based application designed to manage certificate deployments efficiently.
 
 Due to the nature of how the program is structured, this program works with wildcard certificates only. 
 
@@ -18,12 +20,12 @@ I might consider adding greater levels of control to permit regular certificates
 
 ### Features
 
-- **Manage Multiple Certificates**: AuthentiPy can handle certificates for various services such as GitLab, Graylog, NetBox, OpenNMS, and Postfix.
+- **Manage Multiple Certificates**: insrt.py can handle certificates for various services such as GitLab, Graylog, NetBox, OpenNMS, and Postfix.
 - **Automated Certificate Reload**: Includes commands to reload certificates automatically after updates.
 
 ### Configuration
 
-AuthentiPy uses YAML files to store configuration details, making it easy to manage and update certificate information.
+insrt.py uses YAML files to store configuration details, making it easy to manage and update certificate information.
 
 ## Prerequisites
 
@@ -38,8 +40,8 @@ Click here for detailed usage instructions.
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/MathewKeeling/AuthentiPy.git
-    cd authentipy
+    git clone https://github.com/MathewKeeling/insrt.py.git
+    cd insrt.py
     ```
 
 2. **Set up the virtual environment**:
@@ -53,14 +55,14 @@ Click here for detailed usage instructions.
 
 3. **Run the script**:
     ```sh
-    python authentipy.py
+    python insrt.py
     ```
 
 ## Configuration File Location
 
-- **Servers Configuration**: `$INSTALL_ROOT/authentipy/resources/etc/servers.yaml`
-- **Server Service Inventory**: `$INSTALL_ROOT/authentipy/resources/etc/server_service_inventory.yaml`
-- **Service Manager Configuration**: `$INSTALL_ROOT/authentipy/resources/etc/service_manager.yaml`
+- **Servers Configuration**: `$INSTALL_ROOT/insrt/resources/etc/servers.yaml`
+- **Server Service Inventory**: `$INSTALL_ROOT/insrt/resources/etc/server_service_inventory.yaml`
+- **Service Manager Configuration**: `$INSTALL_ROOT/insrt/resources/etc/service_manager.yaml`
 
 ## Supported Platforms
 

@@ -4,7 +4,7 @@
 
 Navigate to your installation directory.
 
-**Suggested:** ```/opt/apps/authentipy```
+**Suggested:** ```/opt/apps/insrt```
 
 ```bash
 virtualenv ./venv

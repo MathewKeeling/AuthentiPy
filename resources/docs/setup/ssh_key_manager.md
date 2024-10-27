@@ -10,7 +10,7 @@ Here is an overview on how to do that.
 
 ```
 # cd to installation directory
-cd /opt/apps/authentipy
+cd /opt/apps/insrt
 
 # activate virtual environment
 . ./venv/bin/activate

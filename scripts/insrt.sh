@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Set base directories
-BASE_DIR=/opt/apps/authentipy
+BASE_DIR=/opt/apps/insrt
 VENV_DIR=$BASE_DIR/venv
 LOGS_DIR=/opt/apps/resources/logs
 SCRIPT_DIR=$BASE_DIR/scripts
-SCRIPT_NAME=authentipy.py
+SCRIPT_NAME=insrt.py
 
 # Set environment variables
 export VENV=$VENV_DIR

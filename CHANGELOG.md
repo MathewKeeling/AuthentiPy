@@ -3,10 +3,10 @@
 ## [2024.10.26] - 2024-10-26
 
 ### Added
-- Initial release of `authentipy.py` and `ssh_key_manager.py`.
-- `authentipy.py`:
+- Initial release of `insrt.py` and `ssh_key_manager.py`.
+- `insrt.py`:
   - Script to automatically update certificates on systems.
-  - Logging setup to `$INSTALL_ROOT/authentipy/resources/logs/authentipy.log`.
+  - Logging setup to `$INSTALL_ROOT/insrt/resources/logs/insrt.log`.
   - Server and service management using `ServerManager` and `ServiceManager`.
   - Certificate update process with progress tracking using `tqdm`.
 - `ssh_key_manager.py`:
