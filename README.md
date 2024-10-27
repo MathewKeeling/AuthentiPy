@@ -12,9 +12,9 @@
 
 **AuthentiPy** is a Python-based application designed to manage certificate deployments efficiently.
 
-Due to the nature of how the program is structured--this program works with wildcard certificates only.
+Due to the nature of how the program is structured, this program works with wildcard certificates only. 
 
-I might consider adding great levels of control to permit regular certificates as well. Forks/PRs welcomed.
+I might consider adding greater levels of control to permit regular certificates as well. Forks/PRs welcomed.
 
 ### Features
 
@@ -29,12 +29,12 @@ AuthentiPy uses YAML files to store configuration details, making it easy to man
 
 Before running the script, make sure you have the following:
 
-- Python 3.12 installed
+- Python 3.12 installed.
 - Follow the setup guide.
 
 ## Usage
 
-Click [here](/resources/docs/setup/) for detailed usage instructions.
+Click here for detailed usage instructions.
 
 1. **Clone the repository**:
     ```sh
@@ -73,4 +73,4 @@ This script supports Linux systems.
 
 ## License
 
-This project is licensed under the [**GNU General Public License, version 3**](./LICENSE). 
+This project is licensed under the **GNU General Public License, version 3**.
