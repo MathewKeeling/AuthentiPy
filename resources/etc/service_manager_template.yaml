@@ -1,0 +1,79 @@
+# Remove this line and rename to: service_manager.yaml
+# This is a user editable config file.
+services:
+  dns:
+    ports: {53: "DNS"}
+    name: "DNS"
+    description: "Domain Name System service."
+    install_path: "NA"
+    cert_req: false
+
+  gitlab:
+    ports: {80: "HTTP", 443: "HTTPS"}
+    name: "GitLab"
+    description: "GitLab Web service."
+    install_path: "/install/path/gitlab/"
+    cert_req: true
+    certificate: "gitlab"
+
+  graylog:
+    ports: {80: "HTTP", 443: "HTTPS"}
+    name: "Graylog"
+    description: "Graylog service."
+    install_path: "/install/path/graylog/"
+    cert_req: true
+    certificate: "graylog"
+
+  netbox:
+    ports: {80: "HTTP", 443: "HTTPS"}
+    name: "NetBox"
+    description: "NetBox service."
+    install_path: "/install/path/netbox/"
+    cert_req: true
+    certificate: "netbox"
+
+  opennms:
+    ports: {80: "HTTP", 443: "HTTPS", 8980: "OpenNMS"}
+    name: "OpenNMS"
+    description: "OpenNMS service."
+    install_path: "/install/path/opennms/"
+    cert_req: true
+    certificate: "opennms"
+
+  openvpn:
+    ports: {1194: "UDP", 443: "TCP"}
+    name: "OpenVPN"
+    description: "OpenVPN service."
+    install_path: "/usr/local/openvpn_as/"
+    cert_req: true
+    certificate: "openvpn"
+
+  planka:
+    ports: {80: "HTTP", 443: "HTTPS", 8980: "OpenNMS"}
+    name: "Planka"
+    description: "Planka service."
+    install_path: "/install/path/planka/"
+    cert_req: true
+    certificate: "planka"
+
+  postfix:
+    ports: {25: "SMTP", 465: "SMTPS", 587: "Submission"}
+    name: "Postfix"
+    description: "Postfix service."
+    install_path: "/etc/postfix/"
+    cert_req: true
+    certificate: "postfix"
+
+  rdp:
+    ports: {3389: "RDP"}
+    name: "RDP"
+    description: "Remote Desktop Protocol service."
+    install_path: "NA"
+    cert_req: false
+
+  ssh:
+    ports: {22: "SSH"}
+    name: "SSH"
+    description: "SSH service."
+    install_path: "NA"
+    cert_req: false

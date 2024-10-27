@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+black = "==24.4.2"
+hvac = "==2.3.0"
+netmiko = "==4.4.0"
+orjson = "==3.10.6"
+pandas = "==2.2.2"
+paramiko = "==3.5.0"
+pytest = "==8.2.2"
+tqdm = "==4.62.3"
+
+[requires]
+python_version = "3.12"

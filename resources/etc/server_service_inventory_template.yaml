@@ -1,0 +1,5 @@
+# Remove this line and rename to: server_service_inventory.yaml
+# This is a user editable config file.
+server_service_inventory:
+  - name: server.contoso.com
+    service: postfix # this should be taken from the service_manager.yaml

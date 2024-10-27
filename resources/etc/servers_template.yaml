@@ -1,0 +1,8 @@
+# Remove this line and rename to: servers_template.yaml
+# This is a user editable config file.
+servers:
+  server_name:
+    fqdn: "example.contoso.com"
+    ip_address: "192.168.1.20"
+    description: "Postfix server."
+    service_account: "service_account"
