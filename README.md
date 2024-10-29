@@ -1,6 +1,7 @@
-<div style="display: flex; align-items: center;">
-  <div>
-    <pre>
+<table>
+  <tr>
+    <td>
+      <pre>
 -----------------------------------------
 |    _____  _________  ______           |
 |   /  _/ |/ / __/ _ \/_  __/__  __ __  |
@@ -10,12 +11,15 @@
 |                          v2024.10.29  |
 | "INSRT's Not Simply Remote Transfer"  |
 -----------------------------------------
-    </pre>
-  </div>
-  <div>
-    <img src="./resources/img/INSRT.png" alt="INSRT.py" style="margin-left: 20px; max-width: 200px;">
-  </div>
-</div>
+      </pre>
+    </td>
+    <td>
+      <img src="./resources/img/INSRT.png" alt="INSRT.py" style="width: 200px; height: auto;">
+    </td>
+  </tr>
+</table>
+
+
 
 ## Overview
 
