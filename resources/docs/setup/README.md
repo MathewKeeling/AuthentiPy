@@ -4,15 +4,15 @@
 
 1. [Setup Virtual Environment](/resources/docs/setup/virtualenv.md)
 
-1. Configure all etc files [here](/resources/etc)
+1. Configure all etc files [here](/etc)
 
-    1. [Populate AND rename your ```config.yaml``` file](/resources/etc/config_template.yaml)
+    1. [Populate AND rename your ```config.yaml``` file](/etc/template_config.yaml)
 
-    1. [Populate AND rename your ```server_service_inventory.yaml``` file](/resources/etc/server_service_inventory_template.yaml)
+    1. [Populate AND rename your ```server_service_inventory.yaml``` file](/etc/template_server_service_inventory.yaml)
 
-    1. [Populate AND rename your ```servers.yaml``` file](/resources/etc/servers_template.yaml)
+    1. [Populate AND rename your ```servers.yaml``` file](/etc/template_servers.yaml)
 
-    1. [Populate AND rename your ```service_manager.yaml``` file](/resources/etc/service_manager_template.yaml)
+    1. [Populate AND rename your ```service_manager.yaml``` file](/etc/template_service_manager.yaml)
 
 1. Propagate SSH Keys
 

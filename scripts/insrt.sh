@@ -3,7 +3,7 @@
 # Set base directories
 BASE_DIR=/opt/apps/insrt
 VENV_DIR=$BASE_DIR/venv
-LOGS_DIR=/opt/apps/resources/logs
+LOGS_DIR=$BASE_DIR/resources/logs
 SCRIPT_DIR=$BASE_DIR/scripts
 SCRIPT_NAME=insrt.py
 

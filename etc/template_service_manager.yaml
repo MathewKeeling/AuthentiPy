@@ -1,5 +1,5 @@
 # Remove this line and rename to: service_manager.yaml
-# This is a user editable config file.
+# This is a user serviceable config file.
 services:
   dns:
     ports: {53: "DNS"}
