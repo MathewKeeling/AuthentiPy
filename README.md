@@ -19,8 +19,6 @@
   </tr>
 </table>
 
-
-
 ## Overview
 
 **INSRT.Py** is a Python-based application designed to manage certificate deployments efficiently.
