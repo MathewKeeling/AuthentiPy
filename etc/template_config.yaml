@@ -1,0 +1,14 @@
+# Remove this line and rename to: config.yaml
+# This is a user serviceable config file.
+certificates:
+  domain: "contoso.com"
+  fqdn: "ad.contoso.com"
+  root_dir: "/root/.acme.sh"
+  subdomain: "ad"
+  domain_dir: "/root/.acme.sh/contoso.com_ecc"
+  subdomain_dir: "/root/.acme.sh/ad.contosoc.com_cc"
+directories:
+  apps_dir: "$apps_dir"
+  insrt_root: "$insrt_root"
+
+

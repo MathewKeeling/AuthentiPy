@@ -60,9 +60,9 @@ Click here for detailed usage instructions.
 
 ## Configuration File Location
 
-- **Servers Configuration**: `$INSTALL_ROOT/insrt/resources/etc/servers.yaml`
-- **Server Service Inventory**: `$INSTALL_ROOT/insrt/resources/etc/server_service_inventory.yaml`
-- **Service Manager Configuration**: `$INSTALL_ROOT/insrt/resources/etc/service_manager.yaml`
+- **Servers Configuration**: `$INSTALL_ROOT/insrt/etc/servers.yaml`
+- **Server Service Inventory**: `$INSTALL_ROOT/insrt/etc/server_service_inventory.yaml`
+- **Service Manager Configuration**: `$INSTALL_ROOT/insrt/etc/service_manager.yaml`
 
 ## Supported Platforms
 
@@ -72,6 +72,12 @@ This script supports Linux systems.
 
 - Currently supports only Linux-based systems.
 - Requires manual setup of SSH keys and sudoers configuration as per the setup guide.
+
+## Contribution Requirements
+
+### Formatter
+
+This project uses Black.
 
 ## License
 

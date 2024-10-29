@@ -14,38 +14,39 @@ Dependencies:
 import os
 import yaml
 import logging
+import logging.config
 from tqdm import tqdm
 from modules.ServerManager import ServerManager, Server
 from modules.ServiceManager import ServiceManager
-from modules.Environment import install_dir
+from modules.Environment import insrt_root
 
-# Set up logging
-log_file = f"{install_dir}/resources/logs/insrt.log"
-os.makedirs(os.path.dirname(log_file), exist_ok=True)
-logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Load logging configuration
+logging.config.fileConfig("./etc/logging.conf")
+logger = logging.getLogger("insrt")
 
 # Gather servers
-servers_config_dir = f"{install_dir}/resources/etc/servers.yaml"
+servers_config_dir = f"{insrt_root}/etc/servers.yaml"
 servers = ServerManager(config_file=servers_config_dir)
 
 # Load server_service_inventory from YAML file
-with open(f"{install_dir}/resources/etc/server_service_inventory.yaml", "r") as file:
+with open(f"{insrt_root}/etc/server_service_inventory.yaml", "r") as file:
     server_service_inventory = yaml.safe_load(file)
 
 # Load services configuration from YAML file
-with open(f"{install_dir}/resources/etc/service_manager.yaml", "r") as file:
+with open(f"{insrt_root}/etc/service_manager.yaml", "r") as file:
     service_manager_yaml = yaml.safe_load(file)
 
 # Initialize ServiceManager with services from YAML
 service_manager = ServiceManager(services_config=service_manager_yaml)
 
 # Adding services to servers using a loop
-for server in server_service_inventory['server_service_inventory']:
-    server_name = server['name']
-    service_name = server['service']
+for server in server_service_inventory["server_service_inventory"]:
+    server_name = server["name"]
+    service_name = server["service"]
     server_obj = getattr(servers, server_name)
     service_obj = getattr(service_manager, service_name)
     server_obj.add_service(service_obj)
+
 
 def update_certificates():
     """
@@ -54,27 +55,37 @@ def update_certificates():
     total_servers = len(vars(servers))
     with tqdm(total=total_servers, desc="Updating certificates", unit="server") as pbar:
         for server_name, server in vars(servers).items():
-            if isinstance(server, Server):  # Ensure we are dealing with Server instances
+            if isinstance(
+                server, Server
+            ):  # Ensure we are dealing with Server instances
                 for service_name, service in server.services.items():
                     if service.certificate:
-                        logging.info(f"Updating certificate for {server.fqdn} - Service: {service_name}")
+                        logger.info(
+                            f"Updating certificate for {server.fqdn} - Service: {service_name}"
+                        )
                         service.certificate.copy_to_server(server=server)
-                        logging.info(f"Certificate copied to {server.fqdn}")
-                        service.certificate.reload_service(service=service, server=server)
-                        logging.info(f"Service {service_name} restarted on {server.fqdn}")
+                        logger.info(f"Certificate copied to {server.fqdn}")
+                        service.certificate.reload_service(
+                            service=service, server=server
+                        )
+                        logger.info(
+                            f"Service {service_name} restarted on {server.fqdn}"
+                        )
             pbar.update(1)
+
 
 def main():
     update_certificates()
 
+
 if __name__ == "__main__":
     for server_name, server in vars(servers).items():
         service_counter = 0
-        logging.info(f"\nServer FQDN: {server.fqdn}")
-        logging.info(f"Server IP: {server.ip_address}")
-        logging.info(f"Server Description: {server.description}")
+        logger.info(f"\nServer FQDN: {server.fqdn}")
+        logger.info(f"Server IP: {server.ip_address}")
+        logger.info(f"Server Description: {server.description}")
         for service_name, service in server.services.items():
             service_counter += 1
-            logging.info(f"Service {service_counter} Name: {service.name}")
-            logging.info(f"Service {service_counter} Ports: {service.ports}")
+            logger.info(f"Service {service_counter} Name: {service.name}")
+            logger.info(f"Service {service_counter} Ports: {service.ports}")
     main()
